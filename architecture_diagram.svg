@@ -1,0 +1,132 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="900" viewBox="0 0 1200 900">
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10"
+            refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5"
+                    flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="#f1f5f9"/>
+
+  <!-- TITLE -->
+  <text x="600" y="65" text-anchor="middle"
+        font-family="Arial" font-size="34"
+        font-weight="bold" fill="#0f172a">
+    MINI SOC LAB ARCHITECTURE
+  </text>
+
+  <text x="600" y="100" text-anchor="middle"
+        font-family="Arial" font-size="17" fill="#475569">
+    Splunk Enterprise | Sysmon | Windows Endpoint Monitoring
+  </text>
+
+  <!-- WINDOWS VM -->
+  <rect x="270" y="145" width="660" height="160"
+        rx="18" fill="#dbeafe" stroke="#2563eb"
+        stroke-width="3" filter="url(#shadow)"/>
+
+  <text x="600" y="190" text-anchor="middle"
+        font-family="Arial" font-size="27"
+        font-weight="bold" fill="#1e3a8a">
+    WINDOWS 10 VIRTUAL MACHINE
+  </text>
+
+  <text x="600" y="235" text-anchor="middle"
+        font-family="Arial" font-size="20" fill="#1e40af">
+    Sysmon - Endpoint Event Monitoring
+  </text>
+
+  <text x="600" y="270" text-anchor="middle"
+        font-family="Arial" font-size="18" fill="#1e40af">
+    Splunk Universal Forwarder
+  </text>
+
+  <!-- ARROW 1 -->
+  <path d="M600 305 V375"
+        stroke="#64748b" stroke-width="4"
+        fill="none" marker-end="url(#arrow)"/>
+
+  <text x="620" y="347" font-family="Arial"
+        font-size="17" fill="#475569">
+    Event Forwarding
+  </text>
+
+  <!-- WINDOWS HOST -->
+  <rect x="270" y="385" width="660" height="165"
+        rx="18" fill="#ede9fe" stroke="#7c3aed"
+        stroke-width="3" filter="url(#shadow)"/>
+
+  <text x="600" y="430" text-anchor="middle"
+        font-family="Arial" font-size="27"
+        font-weight="bold" fill="#4c1d95">
+    WINDOWS 11 HOST
+  </text>
+
+  <text x="600" y="475" text-anchor="middle"
+        font-family="Arial" font-size="22" fill="#5b21b6">
+    Splunk Enterprise SIEM
+  </text>
+
+  <text x="600" y="510" text-anchor="middle"
+        font-family="Arial" font-size="18" fill="#5b21b6">
+    Receiving Port: TCP 9997
+  </text>
+
+  <!-- ARROW 2 -->
+  <path d="M600 550 V620"
+        stroke="#64748b" stroke-width="4"
+        fill="none" marker-end="url(#arrow)"/>
+
+  <text x="620" y="593" font-family="Arial"
+        font-size="17" fill="#475569">
+    SPL Analysis
+  </text>
+
+  <!-- SOC DETECTION -->
+  <rect x="170" y="630" width="860" height="175"
+        rx="18" fill="#dcfce7" stroke="#16a34a"
+        stroke-width="3" filter="url(#shadow)"/>
+
+  <text x="600" y="677" text-anchor="middle"
+        font-family="Arial" font-size="27"
+        font-weight="bold" fill="#14532d">
+    SOC DETECTION AND INVESTIGATION
+  </text>
+
+  <rect x="205" y="710" width="225" height="65"
+        rx="10" fill="#bbf7d0"/>
+
+  <text x="317" y="750" text-anchor="middle"
+        font-family="Arial" font-size="19" fill="#14532d">
+    SPL Detection Rules
+  </text>
+
+  <rect x="488" y="710" width="225" height="65"
+        rx="10" fill="#bbf7d0"/>
+
+  <text x="600" y="750" text-anchor="middle"
+        font-family="Arial" font-size="19" fill="#14532d">
+    Security Alerts
+  </text>
+
+  <rect x="770" y="710" width="225" height="65"
+        rx="10" fill="#bbf7d0"/>
+
+  <text x="882" y="750" text-anchor="middle"
+        font-family="Arial" font-size="19" fill="#14532d">
+    SOC Dashboard
+  </text>
+
+  <!-- FOOTER -->
+  <text x="600" y="855" text-anchor="middle"
+        font-family="Arial" font-size="17" fill="#64748b">
+    Educational Cybersecurity Lab - MITRE ATT&amp;CK Based Detection
+  </text>
+
+</svg>
