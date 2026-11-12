@@ -1,0 +1,8 @@
+index=main sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" "<EventID>1</EventID>" "rundll32.exe" ("comsvcs.dll" OR "#24") ("MiniDump" OR "lsass")
+| rex field=_raw "<Data Name='User'>(?<User>[^<]+)</Data>"
+| rex field=_raw "<Data Name='ParentImage'>(?<ParentImage>[^<]+)</Data>"
+| rex field=_raw "<Data Name='Image'>(?<Image>[^<]+)</Data>"
+| rex field=_raw "<Data Name='CommandLine'>(?<CommandLine>[^<]+)</Data>"
+| eval Technique="T1003.001 - LSASS Memory Dumping"
+| stats count earliest(_time) as FirstSeen latest(_time) as LastSeen by host, User, ParentImage, Image, CommandLine, Technique
+| convert ctime(FirstSeen) ctime(LastSeen)
