@@ -1,0 +1,8 @@
+index=main sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" "<EventID>1</EventID>" "schtasks.exe" ("/create" OR "-create")
+| rex field=_raw "<Data Name='User'>(?<User>[^<]+)</Data>"
+| rex field=_raw "<Data Name='Image'>(?<Image>[^<]+)</Data>"
+| rex field=_raw "<Data Name='CommandLine'>(?<CommandLine>[^<]+)</Data>"
+| eval RiskLevel=if(match(CommandLine, "(?i)(calc\.exe|cmd\.exe|powershell\.exe|AppData|Public|Temp)"), "HIGH", "MEDIUM")
+| where RiskLevel="HIGH"
+| table _time, host, User, Image, CommandLine, RiskLevel
+| sort - _time
